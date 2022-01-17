@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <title>Macro-Nutrient Tracker</title>
+</head>
+
+<body id="bg-sky">
+    <header class="header">
+        <!-- Navbar -->
+        <nav>
+            <div class="navbar">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" onclick="showOrHideDiv()"/>
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="menu-items">
+                        <li><a href="/index.html">HOME</a></li>
+                        <li><a href="/about.html">ABOUT</a></li>
+                        <li><a href="/projects/SpaceX Website/Index.html">SPACEX LAUNCHES</a></li>
+                        <li><a href="/projects/Weather_app/index.html">WEATHER APP</a></li>
+                        <li><a href="/projects/calorie_tracker/index.html">CALORIE TRACKER</a></li>
+                        <li><a href="/projects/Number Guesser/index.html">NUMBER GUESSER</a></li>
+                        <li><a href="/projects/Github_search/index.html">GITHUB PROFILE FINDER</a></li>
+                        <li><a href="/projects/Chuck_Norris_Joke_Generator/index.html">CHUCK NORRIS JOKES</a></li>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container showOrHide">
+            <h1>Macro-Nutrient Tracker</h1>
+                <div class="lessons-learned mx-auto">
+                    <h2>Methods Used To Render This Page</h2>
+                    <p>I have found that many calorie tracking apps try to do too much. I've always wanted a simple, straightforward one so I built it. This page is written in pure JavaScript so no compiling or loading is necessary. While this isn't the most efficient way to create this app it shows my ability to understand JavaScript at its core. With over 500 lines of code this one was a lot of fun. I use local storage for all items so even if you close the broweser and come back your information will still be in tact. I plan on expanding this in the future.</p>
+                </div>
+            <div class="card mx-auto mt-3" id="calorie-card">
+                <div class="card-content mx-auto">
+                    <h2 class="card-title">Add Food Items</h2>
+                    <br>
+                    <!-- input form -->
+                    <form class="col">
+                        <div class="row mx-auto">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text search-input" id="meal-input">Meal / Item</span>
+                                <input id="item-name" type="text" class="form-control" placeholder="Add meal...">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="calories-input">Calories</span>
+                                <input id="item-calories" type="text" class="form-control" placeholder="Add calories...">
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id=protein-input">Protein</span>
+                                <input id="item-protein" type="text" class="form-control" placeholder="Add protein...">
+                            </div>
+                            <!-- form buttons -->
+                            <button class="btn btn-primary add-btn mx-auto"><i></i> Add Meal</button>
+                            <div>
+                            <button class="btn btn-warning update-btn"><i></i> Update Meal</button>
+                            <button class="btn btn-secondary back-btn"><i></i>Back</button>
+                            <button class="btn btn-danger delete-btn"><i></i> Delete Meal</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <ul id="calorie-buttons">
+                <h2 class="center-align mt-3">Total Calories: <span class="total-calories">0</span></h2>
+                <h2 class="center-align pb-3">Total Protein: <span class="total-protein">0</span></h2>
+                
+                <!-- Item List -->
+                <ul class="list-group mx-auto" id="item-list">
+                
+                </ul>
+            </ul>
+            <!-- clear button -->
+            <a href="#" class="btn btn-dark mt-5" id="clear-btn">Clear All</a>
+        </div>
+    </header>
+    <script src="/assets/js/popper.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/projects/calorie_tracker/app.js"></script>
+    <script src="/projects/calorie_tracker/script.js"></script>
+    <script src="/homepage.js"></script>
+</body>
+
+</html>
